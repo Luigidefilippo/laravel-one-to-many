@@ -14,6 +14,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Titolo</th>
+            <th scope="col">Type</th>
             <th scope="col">Identificativo</th>
             <th scope="col">Action</th>
         </tr>
@@ -23,6 +24,7 @@
             <tr>
                 <th scope="row">{{ $project->id }}</th>
                 <td>{{ $project->title }}</td>
+                <td>{{$project->type?->name}}</td>
                 <td>{{ $project->slug }}</td>
                 <td>
                     <div class="container d-flex flex-row  ">
