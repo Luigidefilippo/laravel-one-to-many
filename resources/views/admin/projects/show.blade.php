@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>{{$project->title }}</h1>
-<a class="btn btn-primary mt-4" href="{{ route('admin.dashboard') }}">Torna Indietro</a>
+<a class="btn btn-primary mt-4" href="{{ route('admin.projects.index') }}">Torna Indietro</a>
 <div class="d-flex justify-content-between">
     @if ($project->type)
     <p class="text-center">{{ $project->type?->name }}</p>

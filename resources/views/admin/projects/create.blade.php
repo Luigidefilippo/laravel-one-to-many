@@ -13,6 +13,15 @@
 
         @enderror
     </div>
+     <div class="mb-3">
+            <label for="type">Select Type</label>
+            <select class="form-select" id="type" name="type_id">
+                <option selected value=""></option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+        </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" value="{{old('description')}}" id="description" name='description' rows="3" ></textarea>
