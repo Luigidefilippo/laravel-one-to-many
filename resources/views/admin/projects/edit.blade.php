@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<form action="{{ route('admin.projects.update', $project) }}" method="POST">
+<form action="{{ route('admin.projects.update', $project->slug) }}" method="POST">
     @csrf
     @method('PUT')
     <div class="mb-3">
@@ -10,7 +10,7 @@
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">content</label>
-        <textarea class="form-control" value="{{old('description', $project->content)}}" id="description" name='description' rows="3" ></textarea>
+        <textarea class="form-control"  id="description" name='description' rows="3">{{old('description', $project->description)}}</textarea>
     </div>
     <button type="submit" class="btn btn-success">invia</button>
 </form>

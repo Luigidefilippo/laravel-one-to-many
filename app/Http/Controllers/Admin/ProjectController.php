@@ -44,7 +44,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         $data['slug'] = Str::slug($data['title']);
         $project = Project::create($data);
-        return redirect()->route('admin.project.index');
+        return redirect()->route('admin.projects.index');
     }
 
     /**
